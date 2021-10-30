@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Soru1 {
+public class Main {
 	public static void main(String[] args) {
 		Scanner keyboard=new Scanner(System.in);
 		String hamle="";
@@ -27,27 +27,27 @@ public class Soru1 {
 			System.out.println("1. Oyuncu: "+"Can:"+o.can+" A:"+o.altinMadeni[0].returnNmbr(o.controlAltin)+", T:"+o.tasOcagi[0].returnNmbr(o.controlTas)
 					+", O:"+o.odunUretimEvi[0].returnNmbr(o.controlOdun)+", "
 					+"a:"+o.altin+", t:"+o.tas+", o:"+o.odun+", Kule:"+o.controlKule+" Kale:"+o.controlKale+", "
-					+"piyade:"+o.yariUstuCan(o.piyade,o.piyadeSayisi,10)+", okçu:"+o.yariUstuCan(o.okcu,o.okcuSayisi,5)+", suvari:"+o.yariUstuCan(o.suvari,o.suvariSayisi,40));
+					+"piyade:"+o.yariUstuCan(o.piyade,o.piyadeSayisi,10)+", okÃ§u:"+o.yariUstuCan(o.okcu,o.okcuSayisi,5)+", suvari:"+o.yariUstuCan(o.suvari,o.suvariSayisi,40));
 			System.out.println("2. Oyuncu: "+"Can:"+b.can+" A:"+b.altinMadeni[0].returnNmbr(b.controlAltin)+", T:"+b.tasOcagi[0].returnNmbr(b.controlTas)+", O:"
 					+b.odunUretimEvi[0].returnNmbr(b.controlOdun)+", "
 					+"a:"+b.altin+", t:"+b.tas+", o:"+b.odun+", Kule:"+b.controlKule+" Kale:"+b.controlKale+", "
-					+"piyade:"+b.yariUstuCan(b.piyade,b.piyadeSayisi,10)+", okçu:"+b.yariUstuCan(b.okcu,b.okcuSayisi,5)+", suvari:"+b.yariUstuCan(b.suvari,b.suvariSayisi,40));		
+					+"piyade:"+b.yariUstuCan(b.piyade,b.piyadeSayisi,10)+", okÃ§u:"+b.yariUstuCan(b.okcu,b.okcuSayisi,5)+", suvari:"+b.yariUstuCan(b.suvari,b.suvariSayisi,40));		
 			if(whichOne%2==0) {
 				System.out.println("\nSira: 1. oyuncu");
 				int hamleSecici=0;
 				boolean yapaBildiMi=false;				
 				while(!yapaBildiMi) {
-					System.out.println("\nYapýlacak hamlenizi seçiniz\r\n"
+					System.out.println("\nYapÄ±lacak hamlenizi seÃ§iniz\r\n"
 							+ "0- Pas\r\n"
 							+ "1- Altin madeni kurma\r\n"
-							+ "2- Taþ ocaðý kurma\r\n"
-							+ "3- Odun üretim yeri kurma\r\n"
+							+ "2- TaÅŸ ocaÄŸÄ± kurma\r\n"
+							+ "3- Odun Ã¼retim yeri kurma\r\n"
 							+ "4- Kule yapma\r\n"
 							+ "5- Kale yapma\r\n"
-							+ "6- 1 piyade üretme\r\n"
-							+ "7- 1 okçu üretme\r\n"
-							+ "8- 1 suvari üretme\r\n"
-							+ "9- Saldýrý");
+							+ "6- 1 piyade Ã¼retme\r\n"
+							+ "7- 1 okÃ§u Ã¼retme\r\n"
+							+ "8- 1 suvari Ã¼retme\r\n"
+							+ "9- SaldÄ±rÄ±");
 					if(hamle.length()>0) {						
 						hamleSecici=Integer.valueOf(hamle.charAt(0)-48);						
 						hamle=hamle.substring(1);
@@ -57,7 +57,7 @@ public class Soru1 {
 					yapaBildiMi=o.doIt(hamleSecici,b,whichOne%2==0);					
 					if(yapaBildiMi&&hamleSecici==9) {
 						if(b.can==101) {
-							System.out.println("Kazandýnýz!");
+							System.out.println("KazandÄ±nÄ±z!");
 							control=false;
 							break;							
 						}						
